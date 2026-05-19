@@ -54,18 +54,18 @@ export interface Building {
 export const INTERNAL_WIDTH = 320
 export const INTERNAL_HEIGHT = 180
 export const GROUND_Y = 148
-export const WALK_SPEED = 1.2
-export const ATTACK_DURATION = 28
-export const ATTACK_HIT_START = 8
-export const ATTACK_HIT_END = 13
-export const HURT_DURATION = 16
-export const KNOCKBACK_SPEED = 2.5
+export const WALK_SPEED = 1.4
+export const ATTACK_DURATION = 24
+export const ATTACK_HIT_START = 3
+export const ATTACK_HIT_END = 14
+export const HURT_DURATION = 14
+export const KNOCKBACK_SPEED = 3
 export const ATTACK_DAMAGE = 12
-export const DEFEND_DAMAGE = 4
+export const DEFEND_DAMAGE = 5
 export const MAX_HP = 100
 export const MECHA_WIDTH = 20
 export const MECHA_HEIGHT = 22
-export const ATTACK_RANGE = 28
+export const ATTACK_RANGE = 34
 export const ARENA_LEFT = 10
 export const ARENA_RIGHT = 310
 

@@ -181,11 +181,11 @@ export class GameEngine {
 
   private updateGame() {
     const [p1, p2] = this.mechas
+    this.updateFacing()
     this.updateMecha(p1, P1_KEYS)
     this.updateMecha(p2, P2_KEYS)
     this.checkCombat(p1, p2)
     this.checkCombat(p2, p1)
-    this.updateFacing()
     for (const m of this.mechas) {
       m.x += m.vx
       m.vx *= 0.85
@@ -241,6 +241,7 @@ export class GameEngine {
       mecha.state = 'attack'
       mecha.stateTimer = ATTACK_DURATION
       mecha.attackHit = false
+      mecha.animFrame = 0
       mecha.vx = 0
       return
     }
@@ -257,10 +258,10 @@ export class GameEngine {
 
   private updateFacing() {
     const [p1, p2] = this.mechas
-    if (p1.state !== 'attack' && p1.state !== 'hurt') {
+    if (p1.state !== 'hurt') {
       p1.facing = p1.x < p2.x ? 1 : -1
     }
-    if (p2.state !== 'attack' && p2.state !== 'hurt') {
+    if (p2.state !== 'hurt') {
       p2.facing = p2.x < p1.x ? 1 : -1
     }
   }

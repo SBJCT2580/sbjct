@@ -154,7 +154,7 @@ export function drawMecha(
 
   // Arms & Attack/Defend
   if (state === 'attack') {
-    const progress = (animFrame % 28) / 28
+    const progress = (animFrame % 24) / 24
     // Back arm (idle)
     d(2, 10, 3, 5, colors.primary)
     d(2, 15, 3, 2, colors.dark)
